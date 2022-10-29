@@ -146,8 +146,9 @@
 																<div style="font-family: sans-serif">
 																	<div class style="font-size: 12px; mso-line-height-alt: 18px; color: #191919; line-height: 1.5; font-family: Montserrat, Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif;">
 																		<p style="margin: 0; font-size: 16px; text-align: center; mso-line-height-alt: 24px;"><strong><span style="font-size:38px;">{{ $details['title'] }}</span></strong></p>
-																		<p style="margin: 0; font-size: 16px; text-align: center; mso-line-height-alt: 30px;"><span style="font-size:20px;"><strong>From: {{ $details['name'] }} | </strong></span><span style="font-size:20px;"><strong><strong>Email: {{ $details['email'] }}</strong></strong></span></p>
-																	</div>
+																		<p style="margin: 0; font-size: 16px; text-align: center; mso-line-height-alt: 30px;"><span style="font-size:20px;"><strong>Од: {{ $details['name'] }}</strong></span></p>
+																		<p style="margin: 0; font-size: 16px; text-align: center; mso-line-height-alt: 30px;"><span style="font-size:20px;"><strong>Емаил: {{ $details['email'] }}</strong></span></p>
+                                                                    </div>
 																</div>
 															</td>
 														</tr>

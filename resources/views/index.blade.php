@@ -364,7 +364,7 @@
             <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
               <a style="color: inherit;" href="tel:+389 47 222 603"> 
               <i class="bi bi-phone"></i>
-              <h4>Call:</h4>
+              <h4>Телефонски број:</h4>
               <p>+389 47 222 603<br></p>
               </a>
             </div>
