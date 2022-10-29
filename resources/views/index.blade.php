@@ -122,19 +122,22 @@
         <div class="row">
 
           <div class="col-lg-5 align-items-stretch video-box" style='background-image: url("assets/img/about.jpg");'>
-            <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video" data-autoplay="true"></a>
           </div>
 
           <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch">
 
             <div class="content">
-              <h3><strong>За нас</strong></h3>
-              <p>
-                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                culpa qui officia deserunt mollit anim id est laborum.
-                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-              </p>
+                <h3><strong>За нас</strong></h3>
+                <h4>Секогаш може и подобро!</h4>
+                <p>
+                  Во срцето на градот во 2004 година започна авантурата наречена Кус-Кус.<br>
+                  Во потрага по нови вкусови започна овој спој на македонска и интернационална кујна.<br>
+                  <br>Амбиентот во акорд со кујната, место кое ви нуди спој на домашни и свежо приготвени јадења.<br>
+                  Обемното мени ќе направи да се навратите повторно и да ја почувствувате нашата храна со внимателно одбрани продукти.<br>
+                  <br>За добар вкус, Кус-Кус!<br>
+                  Мото кое ќе се потрудиме за вас да го задржи вистинското значење.<br>
+                  <br><strong>Bon Appétit!</strong>                 
+                </p>
             </div>
 
           </div>
