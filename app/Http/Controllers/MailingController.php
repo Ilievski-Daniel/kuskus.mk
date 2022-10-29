@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\ContactFormRequest;
 
 class MailingController extends Controller
 {
-    public function contactUs(Request $request)
+    public function contactUs(ContactFormRequest $request)
     {
         $details = [
             'title'     => 'Емаил испратен преку kuskus.mk',

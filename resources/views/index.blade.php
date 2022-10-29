@@ -376,16 +376,28 @@
           <div class="row">
             <div class="col-md-6 form-group">
               <input type="text" name="name" class="form-control" id="name" placeholder="Вашето име">
+              @error('name')
+                <div style="color: red; margin-top: 1%">{{ $message }}</div>
+              @enderror
             </div>
             <div class="col-md-6 form-group mt-3 mt-md-0">
               <input type="text" class="form-control" name="email" id="email" placeholder="Вашиот емаил">
+              @error('email')
+                <div style="color: red; margin-top: 1%">{{ $message }}</div>
+              @enderror
             </div>
           </div>
           <div class="form-group mt-3">
             <input type="text" class="form-control" name="subject" id="subject" placeholder="Наслов">
+            @error('subject')
+              <div style="color: red; margin-top: 1%">{{ $message }}</div>
+            @enderror
           </div>
           <div class="form-group mt-3">
             <textarea class="form-control" name="message" rows="5" placeholder="Порака"></textarea>
+            @error('message')
+              <div style="color: red; margin-top: 1%">{{ $message }}</div>
+            @enderror
           </div>
           <div style="margin-top: 1%" class="text-center"><button type="submit">Испрати порака</button></div>
         </form>
