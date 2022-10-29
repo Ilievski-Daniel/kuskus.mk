@@ -405,28 +405,32 @@
 
         <div class="info-wrap">
           <div class="row">
-            <div class="col-lg-3 col-md-6 info">
+            <div class="col-lg-3 col-md-6 info"><a href="https://www.google.com/maps/place/Kus+Kus/@41.0294144,21.3302584,17z/data=!3m1!4b1!4m5!3m4!1s0x135724fdb1403113:0xb45d4f37cdc5073f!8m2!3d41.0294145!4d21.3347431" rel="noopener noreferrer" target="_blank">
               <i class="bi bi-geo-alt"></i>
-              <h4>Location:</h4>
-              <p>A108 Adam Street<br>New York, NY 535022</p>
-            </div>
+              <h4>Локација:</h4>
+              <p>Kiril I Metodij 2A, Bitola <br>Republic of Macedonia</p>
+            </div></a>
 
             <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
               <i class="bi bi-clock"></i>
-              <h4>Open Hours:</h4>
-              <p>Monday-Saturday:<br>11:00 AM - 2300 PM</p>
+              <h4>Работно време:</h4>
+              <p>Понеделник - Недела:<br> 9:00 AM - 1:00 AM</p>
             </div>
 
             <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
+              <a style="color: inherit;" href="mailto:contact@kuskus.mk">
               <i class="bi bi-envelope"></i>
-              <h4>Email:</h4>
-              <p>info@example.com<br>contact@example.com</p>
+              <h4>Емаил адреса:</h4>
+              <p>contact@kuskus.mk<br></p>
+              </a>
             </div>
 
             <div class="col-lg-3 col-md-6 info mt-4 mt-lg-0">
+              <a style="color: inherit;" href="tel:+389 47 222 603"> 
               <i class="bi bi-phone"></i>
               <h4>Call:</h4>
-              <p>+1 5589 55488 51<br>+1 5589 22475 14</p>
+              <p>+389 47 222 603<br></p>
+              </a>
             </div>
           </div>
         </div>
@@ -434,24 +438,19 @@
         <form action="forms/contact.php" method="post" role="form" class="php-email-form">
           <div class="row">
             <div class="col-md-6 form-group">
-              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+              <input type="text" name="name" class="form-control" id="name" placeholder="Вашето име">
             </div>
             <div class="col-md-6 form-group mt-3 mt-md-0">
-              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+              <input type="text" class="form-control" name="email" id="email" placeholder="Вашиот емаил">
             </div>
           </div>
           <div class="form-group mt-3">
-            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+            <input type="text" class="form-control" name="subject" id="subject" placeholder="Наслов">
           </div>
           <div class="form-group mt-3">
-            <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+            <textarea class="form-control" name="message" rows="5" placeholder="Порака"></textarea>
           </div>
-          <div class="my-3">
-            <div class="loading">Loading</div>
-            <div class="error-message"></div>
-            <div class="sent-message">Your message has been sent. Thank you!</div>
-          </div>
-          <div class="text-center"><button type="submit">Send Message</button></div>
+          <div style="margin-top: 1%" class="text-center"><button type="submit">Испрати порака</button></div>
         </form>
 
       </div>
