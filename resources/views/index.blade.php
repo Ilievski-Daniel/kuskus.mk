@@ -262,43 +262,33 @@
           <h2>Резервирај <span>маса</span></h2>
         </div>
 
-        <form action="forms/book-a-table.php" method="post" role="form" class="php-email-form">
+        <form action="/send-reservation-email" method="POST" role="form" class="php-email-form">
+          {{ csrf_field() }}
           <div class="row">
             <div class="col-lg-4 col-md-6 form-group">
-              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-              <div class="validate"></div>
+              <input type="text" name="name" class="form-control" id="name" placeholder="Вашето име">
             </div>
             <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
-              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
-              <div class="validate"></div>
+              <input type="email" class="form-control" name="email" id="email" placeholder="Емаил адреса">
             </div>
             <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
-              <input type="text" class="form-control" name="phone" id="phone" placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-              <div class="validate"></div>
+              <input type="text" class="form-control" name="phone" id="phone" placeholder="Телефонски број">
             </div>
             <div class="col-lg-4 col-md-6 form-group mt-3">
-              <input type="text" name="date" class="form-control" id="date" placeholder="Date" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-              <div class="validate"></div>
+              <input type="date" name="date" class="form-control" id="date" placeholder="Датум">
             </div>
             <div class="col-lg-4 col-md-6 form-group mt-3">
-              <input type="text" class="form-control" name="time" id="time" placeholder="Time" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-              <div class="validate"></div>
+              <input type="time" class="form-control" name="time" id="time" placeholder="Време">
             </div>
             <div class="col-lg-4 col-md-6 form-group mt-3">
-              <input type="number" class="form-control" name="people" id="people" placeholder="# of people" data-rule="minlen:1" data-msg="Please enter at least 1 chars">
-              <div class="validate"></div>
+              <input type="number" class="form-control" name="people" id="people" placeholder="Број на луѓе">
             </div>
           </div>
           <div class="form-group mt-3">
-            <textarea class="form-control" name="message" rows="5" placeholder="Message"></textarea>
+            <textarea class="form-control" name="message" rows="5" placeholder="Додатна порака или молба"></textarea>
             <div class="validate"></div>
           </div>
-          <div class="mb-3">
-            <div class="loading">Loading</div>
-            <div class="error-message"></div>
-            <div class="sent-message">Your booking request was sent. We will call back or send an Email to confirm your reservation. Thank you!</div>
-          </div>
-          <div class="text-center"><button type="submit">Send Message</button></div>
+          <div style="margin-top: 1%" class="text-center"><button type="submit">Испрати порака</button></div>
         </form>
 
       </div>
@@ -375,26 +365,26 @@
           {{ csrf_field() }}
           <div class="row">
             <div class="col-md-6 form-group">
-              <input type="text" name="name" class="form-control" id="name" placeholder="Вашето име">
+              <input type="text" value="{{old('name')}}" name="name" class="form-control" id="name" placeholder="Вашето име">
               @error('name')
                 <div style="color: red; margin-top: 1%">{{ $message }}</div>
               @enderror
             </div>
             <div class="col-md-6 form-group mt-3 mt-md-0">
-              <input type="text" class="form-control" name="email" id="email" placeholder="Вашиот емаил">
+              <input type="text" value="{{old('email')}}" class="form-control" name="email" id="email" placeholder="Вашиот емаил">
               @error('email')
                 <div style="color: red; margin-top: 1%">{{ $message }}</div>
               @enderror
             </div>
           </div>
           <div class="form-group mt-3">
-            <input type="text" class="form-control" name="subject" id="subject" placeholder="Наслов">
+            <input type="text" value="{{old('subject')}}" class="form-control" name="subject" id="subject" placeholder="Наслов">
             @error('subject')
               <div style="color: red; margin-top: 1%">{{ $message }}</div>
             @enderror
           </div>
           <div class="form-group mt-3">
-            <textarea class="form-control" name="message" rows="5" placeholder="Порака"></textarea>
+            <textarea class="form-control" name="message" rows="5" placeholder="Порака">{{old('message')}}</textarea>
             @error('message')
               <div style="color: red; margin-top: 1%">{{ $message }}</div>
             @enderror
