@@ -9,3 +9,6 @@ Route::get('/', function () {
 
 Route::post('/send-contact-email', [MailingController::class, 'contactUs']);
 Route::post('/send-reservation-email', [MailingController::class, 'reservation']);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
