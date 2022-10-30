@@ -1,4 +1,12 @@
-@extends('layouts.app')
+<script type="text/javascript">
+
+    // Redirect us to login, because we don't want to allow new users to
+    document.location.href="http://127.0.0.1:8000/login";
+    
+</script>
+
+{{-- Commented register functionallity in case we need it in the future --}}
+{{-- @extends('layouts.app')
 
 @section('content')
 <div class="container">
@@ -74,4 +82,4 @@
         </div>
     </div>
 </div>
-@endsection
+@endsection --}}
