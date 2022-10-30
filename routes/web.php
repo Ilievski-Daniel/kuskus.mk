@@ -8,3 +8,4 @@ Route::get('/', function () {
 });
 
 Route::post('/send-contact-email', [MailingController::class, 'contactUs']);
+Route::post('/send-reservation-email', [MailingController::class, 'reservation']);

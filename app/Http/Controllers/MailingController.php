@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\ContactFormRequest;
+use App\Http\Requests\ReservationRequest;
+
 
 class MailingController extends Controller
 {
@@ -22,21 +24,22 @@ class MailingController extends Controller
         return redirect()->back();
     }
 
-    // public function reservation(Request $request)
-    // {
-    //     $details = [
-    //         'title'     => 'Резервација преку kuskus.mk',
-    //         'name'      => $request['name'],
-    //         'email'     => $request['email'],
-    //         'phone'     => $request['phone'],
-    //         'date'      => $request['date'],
-    //         'number'    => $request['number'],
-    //         'subject'   => "Резервација на име" + " " + $reqest['name'],
-    //         'message'   => $request['message'],
-    //     ];
+    public function reservation(ReservationRequest $request)
+    {
+        $details = [
+                    'title'                 => 'Резервација преку kuskus.mk',
+                    'reservation_name'      => $request['reservation_name'],
+                    'reservation_email'     => $request['reservation_email'],
+                    'phone'                 => $request['phone'],
+                    'date'                  => $request['date'],
+                    'time'                  => $request['time'],
+                    'people'                => $request['people'],
+                    'subject'               => "Резервација на име" . " " . $request['reservation_name'],
+                    'reservation_message'   => $request['reservation_message'],
+                ];
        
-    //     \Mail::to('contact@kuskus.mk')->send(new \App\Mail\ContactForm($details));
+        \Mail::to('contact@kuskus.mk')->send(new \App\Mail\ReservationForm($details));
         
-    //     return redirect()->back();
-    // }
+        return redirect()->back();
+    }
 }

@@ -266,27 +266,47 @@
           {{ csrf_field() }}
           <div class="row">
             <div class="col-lg-4 col-md-6 form-group">
-              <input type="text" name="name" class="form-control" id="name" placeholder="Вашето име">
+              <input type="text" value="{{old('reservation_name')}}" name="reservation_name" class="form-control" id="name" placeholder="Вашето име">
+              @error('reservation_name')
+                <div style="color: red; margin-top: 1%">{{ $message }}</div>
+              @enderror
             </div>
             <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
-              <input type="email" class="form-control" name="email" id="email" placeholder="Емаил адреса">
+              <input type="text" value="{{old('reservation_email')}}" class="form-control" name="reservation_email" id="email" placeholder="Емаил адреса">
+              @error('reservation_email')
+                <div style="color: red; margin-top: 1%">{{ $message }}</div>
+              @enderror
             </div>
             <div class="col-lg-4 col-md-6 form-group mt-3 mt-md-0">
-              <input type="text" class="form-control" name="phone" id="phone" placeholder="Телефонски број">
+              <input type="text" value="{{old('phone')}}" class="form-control" name="phone" id="phone" placeholder="Телефонски број">
+              @error('phone')
+                <div style="color: red; margin-top: 1%">{{ $message }}</div>
+              @enderror
             </div>
             <div class="col-lg-4 col-md-6 form-group mt-3">
-              <input type="date" name="date" class="form-control" id="date" placeholder="Датум">
+              <input type="date" min="<?php echo date("Y-m-d") ?>" value="<?php echo date("Y-m-d") ?>" name="date" class="form-control" id="date" placeholder="Датум">
+              @error('date')
+                <div style="color: red; margin-top: 1%">{{ $message }}</div>
+              @enderror
             </div>
             <div class="col-lg-4 col-md-6 form-group mt-3">
-              <input type="time" class="form-control" name="time" id="time" placeholder="Време">
+              <input type="time" value="09:00" class="form-control" name="time" id="time" placeholder="Време">
+              @error('time')
+                <div style="color: red; margin-top: 1%">{{ $message }}</div>
+              @enderror
             </div>
             <div class="col-lg-4 col-md-6 form-group mt-3">
-              <input type="number" class="form-control" name="people" id="people" placeholder="Број на луѓе">
+              <input type="number" value="{{old('people')}}" class="form-control" name="people" id="people" placeholder="Број на луѓе">
+              @error('people')
+                <div style="color: red; margin-top: 1%">{{ $message }}</div>
+              @enderror
             </div>
           </div>
           <div class="form-group mt-3">
-            <textarea class="form-control" name="message" rows="5" placeholder="Додатна порака или молба"></textarea>
-            <div class="validate"></div>
+            <textarea class="form-control" name="reservation_message" rows="5" placeholder="Додатна порака или молба">{{old('reservation_message')}}</textarea>
+            @error('reservation_message')
+              <div style="color: red; margin-top: 1%">{{ $message }}</div>
+            @enderror
           </div>
           <div style="margin-top: 1%" class="text-center"><button type="submit">Испрати порака</button></div>
         </form>
