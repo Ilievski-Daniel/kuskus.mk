@@ -1,4 +1,9 @@
-@extends('layouts.app')
+<script type="text/javascript">
+
+    document.location.href="http://127.0.0.1:8000/login";
+    
+</script>
+{{-- @extends('layouts.app')
 
 @section('content')
 <div class="container">
@@ -25,4 +30,4 @@
         </div>
     </div>
 </div>
-@endsection
+@endsection --}}
