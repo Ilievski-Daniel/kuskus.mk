@@ -57,7 +57,7 @@
             </div> 
 
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="create-item">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Додади храна/пијалок</span></a>
             </li>
