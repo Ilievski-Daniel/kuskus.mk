@@ -92,7 +92,12 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{auth()->user()->name}}</span>
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">| Одјави се</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">
+                                    <form action="{{ route('logout') }}" method="post">
+                                        @csrf
+                                        <button style="border: none; color: #8D87A7; background-color: white; border-color: white; text-decoration: none;" type="submit">|‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎ Одјави се</button>
+                                    </form>
+                                </span>
                                 <img class="img-profile rounded-circle ml-2" src="/assets/img/favicon.ico">
 
                             </a>
