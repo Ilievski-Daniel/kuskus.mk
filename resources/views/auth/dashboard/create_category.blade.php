@@ -1,8 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="container">
+    
     <form action="/create-category" method="POST" role="form">
+        @if (\Session::has('success'))
+            <div class="alert alert-success">
+                <ul>
+                    <li>{!! \Session::get('success') !!}</li>
+                </ul>
+            </div>
+        @endif
           {{ csrf_field() }}
         <div class="form-group">
           <label for="category">Внеси име на нова категорија:</label>

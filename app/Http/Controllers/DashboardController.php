@@ -15,5 +15,7 @@ class DashboardController extends Controller
         $user = new Category(); 
         $user->category = $request->category;
         $user->save();
+
+        return redirect()->back()->with('success', 'Вашата нова категорија "' . $request->category . '" е успешно додадена во менито!');
     }
 }
