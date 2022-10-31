@@ -9,6 +9,10 @@
 
     <title>{{ config('app.name', 'Dashboard') }}</title>
 
+    <!-- Favicons -->
+    <link href="/assets/img/favicon.ico" rel="icon">
+    <link href="/assets/img/favicon.ico" rel="apple-touch-icon">
+
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
