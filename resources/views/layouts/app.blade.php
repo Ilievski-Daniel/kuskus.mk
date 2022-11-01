@@ -57,12 +57,6 @@
             </div> 
 
             <li class="nav-item">
-                <a class="nav-link" href="create-item">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Додади храна/пијалок</span></a>
-            </li>
-
-            <li class="nav-item">
                 <a class="nav-link" href="create-category">
                     <i class="fas fa-fw">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -72,6 +66,12 @@
                     <span>Додади категорија</span></a>
             </li>
 
+            <li class="nav-item">
+                <a class="nav-link" href="create-item">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Додади храна/пијалок</span></a>
+            </li>
+            
             <li class="nav-item">
                 <a class="nav-link" href="#">
                     <i class="fas fa-fw fa-table"></i>
@@ -106,7 +106,7 @@
                                         <button style="border: none; color: #8D87A7; background-color: white; border-color: white; text-decoration: none;" type="submit">|‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎ Одјави се</button>
                                     </form>
                                 </span>
-                                <img class="img-profile rounded-circle ml-2" src="/assets/img/favicon.ico">
+                                {{-- <img class="img-profile rounded-circle ml-2" src="/assets/img/favicon.ico"> --}}
 
                             </a>
                         </li>

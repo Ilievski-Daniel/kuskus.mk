@@ -61,7 +61,7 @@
           <div class="carousel-item active" style="background-image: url(assets/img/slide/bitola.jpeg);">
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2 class="animate__animated animate__fadeInDown"><span>Kus Kus</span> Restaurant</h2>
+                <h2 class="animate__animated animate__fadeInDown"><span>Kus Kus</span> Pizza Restaurant</h2>
                 <div>
                   <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Погледни мени</a>
                   <a href="#book-a-table" class="btn-book animate__animated animate__fadeInUp scrollto">Резервирај маса</a>
