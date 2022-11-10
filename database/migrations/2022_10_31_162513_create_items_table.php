@@ -23,7 +23,8 @@ return new class extends Migration
             $table->foreign('category_id')
                 ->references('id')
                 ->on('categories')
-                ->onCascade('delete');
+                ->onCascade('delete')
+                ->onDelete('cascade');
         });
     }
 

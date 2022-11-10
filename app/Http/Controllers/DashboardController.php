@@ -39,4 +39,27 @@ class DashboardController extends Controller
         return redirect()->back()->with('success', 'Нова храна со име "' . $request->name . '" е успешно додадена во менито!');
     }
     
+    public function listCategories(){
+        $categories = Category::all();
+        return view('auth.dashboard.list_categories')->with('categories', $categories);;
+    }
+    public function deleteCategory(Request $request){
+        $category = Category::findOrFail($request->deleteCategoryID);
+        $category->delete();
+        return redirect()->back()->with('success', 'Категоријата е успешно избришана!');
+    }
+
+    public function editCategory(Request $request){
+        $category = Category::find($request->editCategoryID);
+        return view('auth.dashboard.edit_category')->with('category', $category);
+    }
+
+    public function updateCategory(Request $request){
+        Category::where('id', $request->categoryID)
+            ->update([
+                'name' => $request->name
+            ]);
+
+        return redirect()->back()->with('success', 'Категоријата е успешно изменета!'); 
+    }
 }
