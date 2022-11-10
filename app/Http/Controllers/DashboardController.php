@@ -43,6 +43,7 @@ class DashboardController extends Controller
         $categories = Category::all();
         return view('auth.dashboard.list_categories')->with('categories', $categories);;
     }
+
     public function deleteCategory(Request $request){
         $category = Category::findOrFail($request->deleteCategoryID);
         $category->delete();
@@ -61,5 +62,17 @@ class DashboardController extends Controller
             ]);
 
         return redirect()->back()->with('success', 'Категоријата е успешно изменета!'); 
+    }
+
+    public function listItems(){
+        $items = Item::all();
+        $categories = Category::all();
+        return view('auth.dashboard.list_items')->with('items', $items)->with('categories', $categories);
+    }
+
+    public function deleteItem(Request $request){
+        $item = Item::findOrFail($request->deleteItemID);
+        $item->delete();
+        return redirect()->back()->with('success', 'Категоријата е успешно избришана!');
     }
 }

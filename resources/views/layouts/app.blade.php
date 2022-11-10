@@ -78,6 +78,11 @@
 
             <hr class="sidebar-divider d-none d-md-block">
             
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Мени
+            </div> 
+
             <li class="nav-item">
                 <a class="nav-link" href="/create-item">
                     <i class="fas fa-plus"></i>
@@ -85,7 +90,7 @@
             </li>
             
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="/list-items">
                     <i class="fas fa-bars"></i>
                     <span>Целосно мени</span></a>
             </li>         
