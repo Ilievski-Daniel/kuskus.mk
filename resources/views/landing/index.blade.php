@@ -182,8 +182,11 @@
         <div class="row">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="menu-flters">
-              <li data-filter="*" class="filter-active">Цело мени</li>
               @foreach ($categories as $category)
+                @if($category->id == $smallestCategoryId)
+                  <li class="filter-active" id="category-btn" data-filter=".filter-{{$category['id']}}">{{$category['name']}}</li>
+                  @php continue @endphp
+                @endif
                   <li data-filter=".filter-{{$category['id']}}">{{$category['name']}}</li>
               @endforeach
             </ul>
@@ -403,7 +406,13 @@
       myBtn.click()
     </script>
   @endif
-  
+
+  <script>
+    $(window).on('load', function() {
+      $("li#category-btn").trigger("click");
+    });
+  </script>
+
 </body>
 
 </html>
