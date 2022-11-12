@@ -15,6 +15,7 @@
           <tr>
             <th scope="col">#</th>
             <th scope="col">Име на храна/пијалок:</th>
+            <th scope="col">Опис:</th>
             <th scope="col">Измени:</th>
             <th scope="col">Избриши:</th>
           </tr>
@@ -27,6 +28,7 @@
             <tr>
                 <th scope="row">@php echo $itemsCount++ @endphp</th>
                 <td>{{$item->name}}</td>
+                <td>{{$item->description}}</td>
                 <td>
                     <form method="GET" action='/edit-item/{{$item->id}}'>
                         @csrf

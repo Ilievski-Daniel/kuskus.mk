@@ -23,16 +23,17 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // Categories routes
-Route::get('/create-category',  [DashboardController::class, 'createCategoryView']);
-Route::post('/create-category', [DashboardController::class, 'createCategory']);
-Route::get('/list-categories',  [DashboardController::class, 'listCategories']);
-Route::post('/delete-category/{category}',   [DashboardController::class, 'deleteCategory']);
-Route::get('/edit-category/{category}',      [DashboardController::class, 'editCategory']);
-Route::post('/update-category/{category}',   [DashboardController::class, 'updateCategory']);
+Route::get('/create-category',             [DashboardController::class, 'createCategoryView']);
+Route::post('/create-category',            [DashboardController::class, 'createCategory']);
+Route::get('/list-categories',             [DashboardController::class, 'listCategories']);
+Route::post('/delete-category/{category}', [DashboardController::class, 'deleteCategory']);
+Route::get('/edit-category/{category}',    [DashboardController::class, 'editCategory']);
+Route::post('/update-category/{category}', [DashboardController::class, 'updateCategory']);
 
 // Menu items routes
-Route::get('/create-item',      [DashboardController::class, 'createItemView']);
-Route::post('/create-item',     [DashboardController::class, 'createItem']);
-Route::get('/list-items',       [DashboardController::class, 'listItems']);
-Route::post('/delete-item/{item}',   [DashboardController::class, 'deleteItem']);
-
+Route::get('/create-item',         [DashboardController::class, 'createItemView']);
+Route::post('/create-item',        [DashboardController::class, 'createItem']);
+Route::get('/list-items',          [DashboardController::class, 'listItems']);
+Route::post('/delete-item/{item}', [DashboardController::class, 'deleteItem']);
+Route::get('/edit-item/{item}',    [DashboardController::class, 'editItem']);
+Route::post('/update-item/{item}', [DashboardController::class, 'updateItem']);

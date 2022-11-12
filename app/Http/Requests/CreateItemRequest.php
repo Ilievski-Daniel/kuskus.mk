@@ -39,10 +39,10 @@ class CreateItemRequest extends FormRequest
     public function messages()
     {
         return [
-            'name.required'             => 'Задолжително внесете име на храната!',
-            'price.required'            => 'Задолжително цена на храната!',
-            'description.required'      => 'Задолжително внесете опис на храната!',
-            'category.required'         => 'Задолжително одберете категорија!',
+            'name.required'             => 'Задолжително внесете име на храната/пијалокот!',
+            'price.required'            => 'Задолжително цена на храната/пијалокот!',
+            'description.required'      => 'Задолжително внесете опис на храната/пијалокот!',
+            'category.required'         => 'Задолжително одберете категорија/пијалокот!',
         ];
     }
 }

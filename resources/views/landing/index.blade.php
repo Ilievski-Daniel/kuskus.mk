@@ -32,7 +32,7 @@
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
       <div class="logo me-auto">
-        <h1><a href="index.html">Kus Kus</a></h1>
+        <h1><a href="/">Kus Kus</a></h1>
       </div>
 
       <nav id="navbar" class="navbar order-last order-lg-0">
@@ -63,7 +63,7 @@
               <div class="carousel-content">
                 <h2 class="animate__animated animate__fadeInDown"><span>Kus Kus</span> Pizza Restaurant</h2>
                 <div>
-                  <a href="#menu" class="btn-menu animate__animated animate__fadeInUp scrollto">Погледни мени</a>
+                  <a href="#menu" class="btn-menu mb-3 animate__animated animate__fadeInUp scrollto">Погледни мени</a>
                   <a href="#book-a-table" class="btn-book animate__animated animate__fadeInUp scrollto">Резервирај маса</a>
                 </div>
               </div>

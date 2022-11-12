@@ -36,7 +36,7 @@ class DashboardController extends Controller
         $item->category_id = $request->category;
         $item->save();
 
-        return redirect()->back()->with('success', 'Нова храна со име "' . $request->name . '" е успешно додадена во менито!');
+        return redirect()->back()->with('success', 'Нова храна/пијалок со име "' . $request->name . '" е успешно додадена во менито!');
     }
     
     public function listCategories(){
@@ -55,7 +55,7 @@ class DashboardController extends Controller
         return view('auth.dashboard.edit_category')->with('category', $category);
     }
 
-    public function updateCategory(Request $request){
+    public function updateCategory(CreateCategoryRequest $request){
         Category::where('id', $request->categoryID)
             ->update([
                 'name' => $request->name
@@ -73,6 +73,24 @@ class DashboardController extends Controller
     public function deleteItem(Request $request){
         $item = Item::findOrFail($request->deleteItemID);
         $item->delete();
-        return redirect()->back()->with('success', 'Категоријата е успешно избришана!');
+        return redirect()->back()->with('success', $item['name'] . "е успешно избришан/а од менито!");
+    }
+
+    public function editItem(Request $request){
+        $item = Item::where('id', $request->editItemID)->first();
+        $categories = Category::all();
+        return view('auth.dashboard.edit_item')->with('item', $item)->with('categories', $categories);
+    }
+
+    public function updateItem(CreateItemRequest $request){
+        Item::where('id', $request->itemID)
+            ->update([
+                'name'          => $request->name,
+                'price'         => $request->price,
+                'description'   => $request->description,
+                'category_id'   => $request->category
+            ]);
+
+        return redirect()->back()->with('success', 'Храната/Пијалокот е успешно изменет!'); 
     }
 }
