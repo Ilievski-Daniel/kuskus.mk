@@ -21,7 +21,7 @@ class MailingController extends Controller
        
         \Mail::to('contact@kuskus.mk')->send(new \App\Mail\ContactForm($details));
         
-        return redirect()->back();
+        return redirect()->back()->with('success', 'Пораката е успешно испратена!'); 
     }
 
     public function reservation(ReservationRequest $request)
@@ -40,6 +40,6 @@ class MailingController extends Controller
        
         \Mail::to('contact@kuskus.mk')->send(new \App\Mail\ReservationForm($details));
         
-        return redirect()->back();
+        return redirect()->back()->with('success', 'Вашата резервација е успешна, ви благодариме!'); 
     }
 }
