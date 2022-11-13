@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use Illuminate\Http\Request;
-
+use App\Models\Item;
 class HomeController extends Controller
 {
     /**
@@ -23,6 +24,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('auth.dashboard.home');
+        $categories = Category::all();
+        $items = Item::all();
+        
+        return view('auth.dashboard.home')
+            ->with('categories', $categories)
+            ->with('items', $items);
     }
 }
